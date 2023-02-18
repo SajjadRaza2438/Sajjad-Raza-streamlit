@@ -22,7 +22,8 @@ file = "https://drive.google.com/file/d/1-is6_bJXuaXVrEyE6YTFTKnHzlgSMf_j/view?u
 # df = pd.read_csv('athlete_events.csv')
 
 # Check for missing values in each column
-print(df.isna().sum())
+# print(df.isna().sum())
+df.isna().sum()
 
 # Fill missing values in the "Age", "Height", and "Weight" columns with the mean value
 df["Age"].fillna(df["Age"].mean(), inplace=True)
