@@ -83,8 +83,10 @@ with st.container():
    
     # Filter the data to only include gold, silver, and bronze medals
     medal_data = filtered_data[filtered_data["Medal"].isin(['Gold', 'Silver', 'Bronze'])]
+    medal_counts = medal_data.groupby(['Year', 'Medal']).size().reset_index(name='No_of_medals')
+    medal_data = medal_data.sort_values('Year')
     # Create the line chart
-    sns.lineplot(x='Year', y='Medal', hue='Medal', data=medal_data)
+    sns.lineplot(x='Year', y='No_of_medals', hue='Medal', data=medal_counts)
     line.pyplot()
     
 
