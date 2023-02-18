@@ -18,8 +18,8 @@ st.subheader('Syed Sajjad Raza')
 
 
 # Load data into a pandas dataframe
-# file = "https://drive.google.com/file/d/1-is6_bJXuaXVrEyE6YTFTKnHzlgSMf_j/view?usp=share_link"
-df = pd.read_csv(r"https://drive.google.com/file/d/1-is6_bJXuaXVrEyE6YTFTKnHzlgSMf_j/view?usp=share_link")
+file = "https://drive.google.com/file/d/1-is6_bJXuaXVrEyE6YTFTKnHzlgSMf_j/view?usp=share_link"
+df = pd.read_csv(file)
 
 # Check for missing values in each column
 print(df.isna().sum())
