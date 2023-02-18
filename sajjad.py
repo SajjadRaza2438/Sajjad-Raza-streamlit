@@ -18,12 +18,12 @@ st.subheader('Syed Sajjad Raza')
 
 
 # Load data into a pandas dataframe
-file = "https://drive.google.com/file/d/1-is6_bJXuaXVrEyE6YTFTKnHzlgSMf_j/view?usp=share_link"
-# df = pd.read_csv('athlete_events.csv')
+# file = "https://drive.google.com/file/d/1-is6_bJXuaXVrEyE6YTFTKnHzlgSMf_j/view?usp=share_link"
+df = pd.read_csv(r"https://drive.google.com/file/d/1-is6_bJXuaXVrEyE6YTFTKnHzlgSMf_j/view?usp=share_link")
 
 # Check for missing values in each column
-# print(df.isna().sum())
-df.isna().sum()
+print(df.isna().sum())
+
 
 # Fill missing values in the "Age", "Height", and "Weight" columns with the mean value
 df["Age"].fillna(df["Age"].mean(), inplace=True)
